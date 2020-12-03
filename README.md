@@ -36,3 +36,6 @@ Next, I must show, that the spatial correspondence is gone, when abolishing the 
 After that, I need to introduce the spatial correspondence via a new method.
 
 Another use case would be artifacts on the noisy images, like dirt on the coverslip or in the beam path. Therefore they could be treated as different objects in separate channels.
+
+## Further Questions:
+Can we use a VAE cycleGAN and constrain some of the latent vectors to represent radius, intensity or other measurable values?
