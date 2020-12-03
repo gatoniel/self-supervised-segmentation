@@ -25,8 +25,14 @@ I checked if the spatial correspondence comes from the residual structure. So I 
 
 The spatial correspondence is also working for affinity maps instead of sketches:
 ![alt text](figures/disk-affinity_cycleGAN_unet.png "Just Unet with affinity maps works, too")
+
+I created a separate toy set with voronoi regions that were opened morphologically and deformed elastically. The network did work good on them, too:
+![alt text](figures/voronoi_cycleGAN_unet.png "Voronoi")
+
 Since affinity maps have two channels and input and output image do need the same number of channels in the cycleGAN model, there is room for improvement. Input and output channel numbers need to be the same for cycleGAN due to the identity loss in this model. I *conjecture* that the identity loss is responsible for the spatial correspondence that now can be seen, and that I couldn´t see last time with my own implementation of cycleGAN without identity loss. I did not use the identity loss, because I was using different input and output channels.
 
 Next, I must show, that the spatial correspondence is gone, when abolishing the identity loss.
 
 After that, I need to introduce the spatial correspondence via a new method.
+
+Another use case would be artifacts on the noisy images, like dirt on the coverslip or in the beam path. Therefore they could be treated as different objects in separate channels.
