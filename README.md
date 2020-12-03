@@ -33,7 +33,7 @@ Since affinity maps have two channels and input and output image do need the sam
 
 Next, I must show, that the spatial correspondence is gone, when abolishing the identity loss.
 
-After that, I need to introduce the spatial correspondence via a new method.
+After that, I need to introduce the spatial correspondence via a new method. One possibility would be to append an identity channel to the generator networks. This would solve the above problem, but this does not give us an interpretable insight. Having an additional loss depending on Euclidean transformation would give a new insight. This would harden the assumption, that the network needs some kind of notion of spatial correspondence. This assumption is implicitly backed into the identity plot.
 
 Another use case would be artifacts on the noisy images, like dirt on the coverslip or in the beam path. Therefore they could be treated as different objects in separate channels.
 
