@@ -20,4 +20,5 @@ I created a new disk dataset with the provided script and trained a cycleGAN net
 This seemed to work:
 ![alt text](figures/disk_cycleGAN_resunet.png "Residual Unet works")
 
-I checked if the spatial correspondence comes from the residual structure. So I reversed the above change and repeated training.
+I checked if the spatial correspondence comes from the residual structure. So I reversed the above change and repeated training. This worked, too:
+![alt text](figures/disk_cycleGAN_unet.png "Just Unet works, too")
